@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Home All Sensors Data</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <h1>ALL SENSORS</h1>
+        </div>
+        <div class="content">
+            <div class="card-grid">
+                <div class="card">
+                    <p class="card-title"><i class="fas fa-thermometer-threequarters" style="color:#C71585;"></i> Температура зал</p>
+                    <p class="reading"><span id="indoor_t_value"></span> &deg;C</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Температура терасса </p>
+                    <p class="reading"><span id="sensors_0_t_value"></span> &deg;C</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Температура гараж </p>
+                    <p class="reading"><span id="sensors_1_t_value"></span> &deg;C</p>
+                </div>
+               <div class="card">
+                    <p class="card-title"> Температура кабинет </p>
+                    <p class="reading"><span id="sensors_2_t_value"></span> &deg;C</p>
+                </div>
+              <div class="card">
+                    <p class="card-title"> Температура спальня </p>
+                    <p class="reading"><span id="mobsensors_2_t_value"></span> &deg;C</p>
+                </div>
+              <div class="card">
+                    <p class="card-title"> Температура котельная </p>
+                    <p class="reading"><span id="mobsensors_1_t_value"></span> &deg;C</p>
+                </div>
+             <div class="card">
+                    <p class="card-title"> Температура улица </p>
+                    <p class="reading"><span id="outdoor_t_value"></span> &deg;C</p>
+                </div>
+             <div class="card">
+                    <p class="card-title"> Атмосферное давление </p>
+                    <p class="reading"><span id="mobsensors_2_pressure_value"></span> мм рт. ст.</p>
+                </div>
+               <div class="card">
+                    <p class="card-title"> MobSensor#2 Vcc </p>
+                    <p class="reading"><span id="mobsensors_2_voltage_value"></span> V</p>
+                    <p class="reading"><font color = "grey"><span id="mobsensors_2_voltage_value_txt"></span></font> </p>
+                </div>
+<div class="card">
+                    <p class="card-title"> Батарея датчика №1 </p>
+                    <p class="reading"><font color = "grey"><span id="sensors_0_battery_stat"></span></font> </p>
+                </div>
+<div class="card">
+                    <p class="card-title"> Батарея датчика №2 </p>
+                    <p class="reading"><font color = "grey"><span id="sensors_1_battery_stat"></span></font> </p>
+                </div>
+<div class="card">
+                    <p class="card-title"> Батарея датчика №3 </p>
+                    <p class="reading"><font color = "grey"><span id="sensors_2_battery_stat"></span></font> </p>
+                </div>
+               <div class="card">
+                    <p class="card-title"> Влажность терасса </p>
+                    <p class="reading"><span id="sensors_0_humidity_value"></span> %</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Влажность гараж </p>
+                    <p class="reading"><span id="sensors_1_humidity_value"></span> %</p>
+                </div>
+               <div class="card">
+                    <p class="card-title"> Влажность кабинет </p>
+                    <p class="reading"><span id="sensors_2_humidity_value"></span> %</p>
+                </div>
+  </div>
+  <h2>Buderus OT</h2>
+ <div class="card-grid">
+                <div class="card">
+                    <p class="card-title"> Температура теплоносителя </p>
+                    <p class="reading"><span id="buderus_t_heating_value"></span> &deg;C</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Целевая температура теплоносителя </p>
+                    <p class="reading"><span id="buderus_t_heating_setpoint"></span> &deg;C</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Целевая температура в помещении </p>
+                    <p class="reading"><span id="buderus_t_target"></span> &deg;C</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Модуляция</p>
+                    <p class="reading"><span id="buderus_modulation_level"></span> %</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Статус пламени </p>
+                    <p class="reading"><font color = "grey"><span id="buderus_flame_status"></span></font> </p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> Статус нагрева </p>
+                    <p class="reading"><font color = "grey"><span id="buderus_heating_status"></span></font> </p>
+               </div>
+           </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
