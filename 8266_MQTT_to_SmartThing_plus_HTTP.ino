@@ -318,7 +318,7 @@ void mqttCallback(char* topic, byte* payload, unsigned int length)
      if (buderus_flame_status == true) (buderus_flame_status_txt = "Вкл"); else (buderus_flame_status_txt = "Выкл");}  // Переводим в удобочитаемый текст для сайта
      if (const char* heating = states["heating"]) {
       buderus_heating_status = states["heating"];
-     if (buderus_heating_status == true) (buderus_heating_status_txt = "Вкл"); else {(buderus_heating_status_txt = "Выкл");}} // Переводим в удобочитаемый текст для сайта
+     if (buderus_heating_status == true) (buderus_heating_status_txt = "Вкл"); else (buderus_heating_status_txt = "Выкл");} // Переводим в удобочитаемый текст для сайта
      if (const char* target = heating["target"]) buderus_t_target = heating["target"];
      
     //Serial.println(sensors_0_t_value);
