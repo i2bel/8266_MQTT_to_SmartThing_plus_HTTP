@@ -307,18 +307,20 @@ void mqttCallback(char* topic, byte* payload, unsigned int length)
            if (mobsensors_2_voltage_value > 1.9) {(mobsensors_2_voltage_value_txt = "Батарея в норме");} else {(mobsensors_2_voltage_value_txt = "Замените батарею!");}  // Переводим в удобочитаемый текст для сайта
           }
       }
-     // Buderus_OT data extraction
+    // Buderus_OT data extraction
      if (const char* outdoor = temperatures["outdoor"] ) outdoor_t_value = temperatures["outdoor"];
      if (const char* indoor = temperatures["indoor"]) indoor_t_value = temperatures["indoor"];
      if (const char* heating = temperatures["heating"]) buderus_t_heating_value = temperatures["heating"];
      if (const char* heatingSetpoint = parameters["heatingSetpoint"]) buderus_t_heating_setpoint = parameters["heatingSetpoint"];
      if (const char* modulation = sensors["modulation"]) buderus_modulation_level = sensors["modulation"];
-     if (const char* flame = states["flame"]) buderus_flame_status = states["flame"];
-     if (states["flame"] = "1") {(buderus_flame_status_txt = "Вкл");} else {(buderus_flame_status_txt = "Выкл");}  // Переводим в удобочитаемый текст для сайта
-     if (const char* heating = states["heating"]) buderus_heating_status = states["heating"];
-     if (states["heating"] = "1") {(buderus_heating_status_txt = "Вкл");} else {(buderus_heating_status_txt = "Выкл");}  // Переводим в удобочитаемый текст для сайта
+     if (const char* flame = states["flame"]) { 
+      buderus_flame_status = states["flame"];
+     if (buderus_flame_status == true) (buderus_flame_status_txt = "Вкл"); else (buderus_flame_status_txt = "Выкл");}  // Переводим в удобочитаемый текст для сайта
+     if (const char* heating = states["heating"]) {
+      buderus_heating_status = states["heating"];
+     if (buderus_heating_status == true) (buderus_heating_status_txt = "Вкл"); else {(buderus_heating_status_txt = "Выкл");}} // Переводим в удобочитаемый текст для сайта
      if (const char* target = heating["target"]) buderus_t_target = heating["target"];
-           
+     
     //Serial.println(sensors_0_t_value);
     //Serial.println(sensors_1_t_value);
     //Serial.println(sensors_2_t_value);
