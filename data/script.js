@@ -36,6 +36,7 @@ function onMessage(event) {
     console.log(event.data);
     var myObj = JSON.parse(event.data);
     var keys = Object.keys(myObj);
+    var font_mobsensors_1_voltage_value_txt = document.getElementById("mobsensors_1_voltage_value_txt");    
     var font_mobsensors_2_voltage_value_txt = document.getElementById("mobsensors_2_voltage_value_txt");
     var font_sensors_0_battery_stat = document.getElementById("sensors_0_battery_stat");  
     var font_sensors_1_battery_stat = document.getElementById("sensors_1_battery_stat");  
@@ -46,7 +47,9 @@ function onMessage(event) {
     for (var i = 0; i < keys.length; i++){
        var key = keys[i];
       document.getElementById(key).innerHTML = myObj[key];      
-      
+
+
+if (key = "mobsensors_1_voltage_value_txt") { if  (myObj[key] == "Батарея в норме") {font_mobsensors_1_voltage_value_txt.style.color = "green";} else {font_mobsensors_1_voltage_value_txt.style.color = "red";}}      
 if (key = "mobsensors_2_voltage_value_txt") { if  (myObj[key] == "Батарея в норме") {font_mobsensors_2_voltage_value_txt.style.color = "green";} else {font_mobsensors_2_voltage_value_txt.style.color = "red";}}
 if (key = "sensors_0_battery_stat") { if  (myObj[key] == "Батарея в норме") {font_sensors_0_battery_stat.style.color = "green";} else {font_sensors_0_battery_stat.style.color = "red";}}
 if (key = "sensors_1_battery_stat") { if  (myObj[key] == "Батарея в норме") {font_sensors_1_battery_stat.style.color = "green";} else {font_sensors_1_battery_stat.style.color = "red";}}

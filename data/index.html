@@ -28,14 +28,16 @@
                     <p class="card-title"> Температура кабинет </p>
                     <p class="reading"><span id="sensors_2_t_value"></span> &deg;C</p>
                 </div>
-              <div class="card">
-                    <p class="card-title"> Температура спальня </p>
+ <div class="card">
+                    <p class="card-title"> Температура Sensor I </p>
+                    <p class="reading"><span id="mobsensors_1_t_value"></span> &deg;C</p>
+                </div>              
+
+<div class="card">
+                    <p class="card-title"> Температура Sensor II </p>
                     <p class="reading"><span id="mobsensors_2_t_value"></span> &deg;C</p>
                 </div>
-              <div class="card">
-                    <p class="card-title"> Температура котельная </p>
-                    <p class="reading"><span id="mobsensors_1_t_value"></span> &deg;C</p>
-                </div>
+             
              <div class="card">
                     <p class="card-title"> Температура улица </p>
                     <p class="reading"><span id="outdoor_t_value"></span> &deg;C</p>
@@ -43,12 +45,33 @@
              <div class="card">
                     <p class="card-title"> Атмосферное давление </p>
                     <p class="reading"><span id="mobsensors_2_pressure_value"></span> мм рт. ст.</p>
+                </div> 
+ <div class="card">
+                    <p class="card-title"> Температура ReBooter </p>
+                    <p class="reading"><span id="ReBooter_t_value"></span> &deg;C</p>
+                </div> 
+<div class="card">
+                    <p class="card-title"> Статус ReBooter </p>
+                    <p class="reading"><span id="ReBooter_state"></span> </p>
+                </div>   
+            
+<div class="card">
+                    <p class="card-title"> ReBooterVoltage</p>
+                    <p class="reading"><span id="ReBooter_voltage_value"></span> V</p>
+                    <p class="reading"><font color = "grey"><span id="ReBooter_voltage_value"></span></font> </p>
                 </div>
-               <div class="card">
-                    <p class="card-title"> MobSensor#2 Vcc </p>
+<div class="card">
+                    <p class="card-title"> MobSensor I Vcc </p>
+                    <p class="reading"><span id="mobsensors_1_voltage_value"></span> V</p>
+                    <p class="reading"><font color = "grey"><span id="mobsensors_1_voltage_value_txt"></span></font> </p>
+                </div>
+ <div class="card">
+                    <p class="card-title"> MobSensor II Vcc </p>
                     <p class="reading"><span id="mobsensors_2_voltage_value"></span> V</p>
                     <p class="reading"><font color = "grey"><span id="mobsensors_2_voltage_value_txt"></span></font> </p>
                 </div>
+
+
 <div class="card">
                     <p class="card-title"> Батарея датчика №1 </p>
                     <p class="reading"><font color = "grey"><span id="sensors_0_battery_stat"></span></font> </p>
@@ -72,6 +95,10 @@
                <div class="card">
                     <p class="card-title"> Влажность кабинет </p>
                     <p class="reading"><span id="sensors_2_humidity_value"></span> %</p>
+                </div>
+ <div class="card">
+                    <p class="card-title"> Влажность Sensor I </p>
+                    <p class="reading"><span id="mobsensors_1_humidity_value"></span> %</p>
                 </div>
   </div>
   <h2>Buderus OT</h2>
